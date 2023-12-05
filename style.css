@@ -1,0 +1,1300 @@
+@font-face {
+    font-family: "Brandon Grotesque";
+    src: url('fonts/brandon-grotesque-light-58a8a4b38001d.otf');
+  }
+@font-face{
+  font-family: "PF Regal Display Pro";
+  src: url('/fonts/PFRegalDisplayPro-Bold.ttf');
+}
+
+@font-face{
+  font-family: "PF Regal Display Lite";
+  src: url('/fonts/PFRegalDisplayPro-Regular.ttf');
+}
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+  body{
+    font-family: 'Roboto', sans-serif;
+   
+  }
+
+  .navigation{
+    background-image:linear-gradient(to bottom, #1919198e, #1919198e),
+    url(/img/principal-desktop.png);
+  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 27%;
+    height: 100vh;
+  }
+
+  .navigation .horizontal-lines{
+    text-align: center;
+    margin-top: 20%;
+
+  }
+
+  .navigation .horizontal-lines i{
+    color: white;
+    font-size: 30px;
+  }
+  
+  nav{
+    background: none;
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid #ffff;
+  }
+  label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    margin-left: 30px;
+    font-weight: bold;
+  }
+
+  .navigation .logo-cell{
+    position: relative;
+    top: 25%;
+    left: 8%;
+  }
+
+
+  @media (min-width: 500px){
+    .navigation .logo-cell{
+      display: none!important;
+      
+    }
+
+    
+  }
+  
+
+  @media (max-width: 500px){
+    .navigation .logo{
+      display: none;
+    }
+    
+  }
+
+
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: white;
+    font-size: 16px;
+    padding: 7px 13px; 
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+
+  a.active{
+    border-right: 1px solid #ffff;
+    border-radius: 0;
+  }
+  
+
+  a.lang{
+    border-right: 1px solid #ffff;
+    border-radius: 0;
+  }
+
+
+ 
+
+
+  nav .signin{
+    margin-right: 60px;
+  }
+
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+  @media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    nav ul li a{
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 500px){
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e50;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: #0082e6;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+  }
+
+
+ 
+
+
+
+
+  .main-section .search{
+    display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  margin-top: 20px;
+  }
+
+  .main-section .search .find{
+    grid-column: 3 / 3;
+    grid-row: 1;
+  }
+
+
+  
+
+  .main-section .search .find input{
+    width: 300px;
+    height: 40px;
+    display: block;
+    border-radius: 25px;
+    font-size: 20px;
+    padding: 8px 40px 8px 20px;
+    font-family: "Brandon Grotesque";
+    border: 2px solid white!important;
+    background-image: url(/img/search-outline.svg);
+    
+    filter: invert(10%) sepia(0%) saturate(100%) hue-rotate(3deg) brightness(100) contrast(100%); 
+    background-color: transparent;
+    font-size: 14px;
+    line-height: 18px;
+    color: #ffffff;
+    background-color: transparent;
+    backface-visibility: hidden;
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: 95% center;
+  }
+
+  .main-section .text-icons{
+    display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  }
+
+  .main-section .text-icons .social{
+    grid-column: 1 / 3;
+    grid-row: 2;
+    margin-left: 10px;
+  }
+
+  .main-section .text-icons .social p{
+    color: #ffffff;
+    writing-mode: vertical-rl;
+text-orientation: mixed;
+  }
+
+  .main-section .text-icons .social .vertical-line{
+    border-style: none solid none none;
+    width: 1px; 
+    color: #e7e3e3;
+    background-color: #ffffff; 
+    height: 100%; /* Override in-line if you want specific height. */
+    margin-left: 10px;
+    margin-top: 5px; 
+  }
+
+  .main-section .text-icons .social ul li{
+    padding: 3px;
+    font-size: 15px;
+  }
+
+
+  .main-section .text-icons .main-text{
+    grid-column: 1 / 3;
+    grid-row: 2;
+    margin-left: 10%;
+  }
+
+  .main-section .text-icons .main-text h3{
+    font-family: 'PF Regal Display Pro';
+    font-size: 35px;
+    color: #A9A9A9;
+  }
+
+  .main-section .text-icons .main-text img{
+      margin: 20px 0px;
+  }
+
+
+
+  @media (max-width: 500px){
+
+    .main-section .text-icons .social p{
+      display: none;
+    }
+  
+    .main-section .text-icons .social .vertical-line{
+       display: none; 
+    }
+
+    .main-section .text-icons .main-text img{
+      width: 100%;
+  }
+   
+    
+  }
+
+  .main-section .text-icons .main-text button{
+    width: 250px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 20px;
+    padding: 8px 40px 8px 20px;
+    font-family: "Brandon Grotesque";
+    border: 2px solid white;
+    background-color: transparent;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+
+  .info{
+  display: grid;
+  grid-gap: 10px;
+  
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  margin-top: 6%;
+  height: 60vh;
+  }
+
+  .info .text-content .nv{
+    display: block;
+  }
+  
+  .info .text-content .mv{
+    display: none;
+  }
+
+   .info .carousel-img{
+    grid-column: 1/2;
+    grid-row: 1; 
+  }
+
+  .info .text-content{
+    grid-column: 2/2;
+    grid-row: 1;
+  } 
+
+ 
+
+  .info .carousel-img .content img{
+    height: 400px;
+  }
+  @media (max-width: 500px){
+
+    .info .carousel-img .content img{
+      height: 200px;
+    }
+    
+  }
+
+
+
+  .info .carousel-img .content{
+    position: relative;
+  display: inline-block;
+
+  font-family: 'PF Regal Display Lite'!important;
+
+  }
+
+  .info .carousel-img .content .castle{
+     width: 30px!important;
+     height: 30px!important;
+  }
+
+  
+
+  .info .carousel-img .content .text-bottom{
+    position: absolute;
+    bottom: -48px;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: #fff; 
+    width: 100%;
+    height: 100px; 
+    font-size: 20px; 
+    text-align: left;
+    padding: 8px;
+  }
+
+
+
+  
+
+  .info .text-content .subtitle{
+    text-align: right;
+    margin-right: 10%;
+  }
+
+  
+
+  .info .text-content .nv{
+    text-align: center;
+    margin-top: 23%;
+    
+  }
+
+
+  
+
+ 
+
+
+  .info .text-content .nv .buttons-nv .main{
+    width: 250px;
+    height: 50px;
+    border-radius: 50px;
+    font-size: 20px;
+    padding: 8px 40px 8px 20px;
+    font-family: "Brandon Grotesque";
+    border: 2px solid black;
+    background-color: transparent;
+    text-align: center;
+    color: black;
+  }
+
+
+  
+
+
+  .info .text-content .nv .buttons-nv .prev{
+    border: none;
+    background: transparent;
+    margin-right: 30px;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .info .text-content .nv .buttons-nv .next{
+    border: none;
+    background: transparent;
+    margin-left: 30px;
+    align-items: center;
+    justify-content: center;
+    color: #e7b254;
+  }
+
+
+  .info .text-content .nv .buttons-nv .prev span{
+    font-size: 30px;
+    position: relative;
+    top: 10px;
+    left: 3px;
+  }
+
+  
+  
+  .info .text-content .nv .buttons-nv .next span{
+    color: #e7b254;
+    font-size: 30px;
+    position: relative;
+  top: 10px;
+  left: 3px;
+ 
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .gallery{
+    display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  margin-top: 6%;
+  height: 60vh;
+  }
+
+ 
+
+  .gallery .car-img .content img{
+    height: 400px;
+  }
+
+
+  .gallery .text-cont .mv{
+    display: none;
+  }
+
+  @media (max-width: 500px){
+
+    .gallery .car-img .content img{
+      height: 200px;
+    }
+  }
+
+  @media(max-width: 574px){
+    .gallery{
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+
+  .gallery .car-img{
+    text-align: right;
+  }
+
+
+  .gallery .car-img .content{
+    
+    position: relative;
+  display: inline-block;
+  font-family: 'PF Regal Display Lite';
+  }
+
+  
+
+  .gallery .car-img .content .text-bottom{
+    position: absolute;
+    bottom: -45px;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background-color: #bdbdbd; 
+    color: #fff; 
+    width: 100%;
+    height: 100px; 
+    font-size: 20px; 
+    text-align: left;
+    padding: 8px;
+  }
+
+
+
+  .gallery .text-cont{
+    grid-column: 1 / 2;
+    grid-row: 1;
+  }
+
+  .gallery .text-cont .subtitle{
+    text-align: left;
+    margin-left: 10%;
+  }
+
+  @media(max-width: 574px) {
+    .gallery .text-cont .subtitle{
+      text-align: left;
+      margin-left: 0;
+    }
+
+    .gallery .subtitle{
+      margin-bottom: 100px;
+    }
+
+    .gallery .text-cont p{
+      font-size: 20px!important;
+    }
+  }
+
+  
+
+  .gallery .text-cont .nv{
+    text-align: center;
+    margin-top: 10%;
+    
+  }
+
+
+
+
+ 
+
+
+  
+
+ 
+
+
+  .gallery .text-cont .nv .buttons-nv .main{
+    width: 250px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 20px;
+    padding: 8px 40px 8px 20px;
+    font-family: "Brandon Grotesque";
+    border: 2px solid black;
+    background-color: transparent;
+    text-align: center;
+    color: black;
+  }
+
+
+  
+
+
+  .gallery .text-cont .nv .buttons-nv .prev{
+    border: none;
+    background: transparent;
+    margin-right: 30px;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .gallery .text-cont .nv .buttons-nv .next{
+    border: none;
+    background: transparent;
+    margin-left: 30px;
+    align-items: center;
+    justify-content: center;
+    color: #e7b254;
+  }
+
+
+  .gallery .text-cont .nv .buttons-nv span{
+    font-size: 30px;
+    position: relative;
+  top: 10px;
+  left: 3px;
+  }
+
+  
+  
+  .info .text-cont .nv .buttons-nv .next span{
+    color: #e7b254;
+    font-size: 30px;
+    position: relative;
+  top: 10px;
+  left: 3px;
+ 
+  }
+
+
+
+
+
+
+
+  .properties{
+    margin: 4% 0;
+  }
+
+  @media (max-width: 500px){
+
+    .properties .text-title{
+      text-align: left;
+      margin: 20px 0px;
+   }
+
+   
+  }
+
+
+  .properties .text-title{
+     text-align: center;
+  }
+
+
+  .img-grid {
+    max-width: 1100px;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 250px;
+    grid-gap: 20px;
+    font-family: 'PF Regal Display Lite';
+  }
+
+.img-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .img-grid {
+      width: 95%;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 10px;
+      grid-template-rows: 200px;
+      align-items: center;
+    }
+
+    .img-grid img{
+      width: 90%;
+  }
+   
+}
+
+
+.img-grid .text{
+  margin: 15px;
+}
+
+.img-grid .text{
+  margin: 15px;
+}
+
+
+
+
+.services{
+  padding-top: 3%;
+}
+
+
+
+.services .container{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; /* Espaciado entre las celdas */
+}
+
+@media (max-width: 768px) {
+  .services .container{
+      grid-template-columns: 1fr; /* Cambia a una sola columna en dispositivos pequeños */
+  }
+}
+
+
+
+
+.services .container .column-main .nv{
+  text-align: center;
+  margin-top: 10%;
+}
+
+.services .container .column-main .contenedor{
+  display: flex;
+  align-items: center;
+}
+
+
+@media (max-width: 500px) {
+  
+  .services .container .column-main .contenedor{
+    display: block;
+    
+  }
+  
+}
+
+
+
+
+
+
+
+.services .container .column-main .nv .buttons-nv .main{
+  width: 250px;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 20px;
+  padding: 8px 40px 8px 20px;
+  font-family: "Brandon Grotesque";
+  border: 2px solid black;
+  background-color: transparent;
+  text-align: center;
+  color: black;
+}
+
+
+
+
+
+.services .container .column-main .nv .buttons-nv .prev{
+  border: none;
+  background: transparent;
+  margin-right: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.services .container .column-main .nv .buttons-nv .next{
+  border: none;
+  background: transparent;
+  margin-left: 30px;
+  align-items: center;
+  justify-content: center;
+  color: #e7b254;
+}
+
+
+.services .container .column-main .nv .buttons-nv span{
+  font-size: 30px;
+  position: relative;
+top: 10px;
+left: 3px;
+}
+
+
+
+.services .container .column-main .nv .buttons-nv .next span{
+  color: #e7b254;
+  font-size: 30px;
+  position: relative;
+top: 10px;
+left: 3px;
+
+}
+
+
+.services .container .column-main img:nth-child(1){
+  width: 80%;
+  padding: 30px 0px;
+}
+
+
+@media (max-width: 500px){
+  
+  .services .container .column-main:nth-child(1){
+      text-align: center!important;
+  }
+
+  .services .container .column-main img:nth-child(1){
+    width: 80%;
+    padding: 10px 0px;
+  }
+  
+  .services .container .column-main:nth-child(2){
+     margin: 0 6%;
+  }
+  
+}
+
+.services .container .column-main .logo-ul{
+  width: 30px;
+}
+
+
+.services .container .column-main:nth-child(1){
+ text-align: right;
+ background: -webkit-linear-gradient(left, #26282B 75%, white 25%);
+   background: -moz-linear-gradient(left, #26282B 75%, white 25%);
+   background: -ms-linear-gradient(left, #26282B 75%, white 25%);
+   background: linear-gradient(left, black 75%, white 25%);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.newsletter{
+  padding-top: 5%;
+  background: -webkit-linear-gradient(bottom, #000000 50%, white 50%);
+   background: -moz-linear-gradient(bottom, #000000 50%, white 50%);
+   background: -ms-linear-gradient(bottom, #000000 50%, white 50%);
+   background: linear-gradient(bottom, #000000 50%, white 50%);
+}
+
+.newsletter .container {
+  
+  display: flex;
+  justify-content: space-between;
+  
+  padding: 20px 50px 50px 50px;
+	background-color: #26282B;
+}
+
+.newsletter .info-column {
+  flex: 1;
+  padding: 20px;
+  border-radius: 8px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.newsletter .form-column {
+  flex: 1;
+  padding: 20px;
+  
+  border-radius: 8px;
+  color: white;
+ 
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+
+.newsletter h1{
+  font-family: 'PF Regal Display Lite';
+  font-size: 45px;
+  color: white;
+}
+.newsletter h2 {
+  color: #DF991B;
+  font-family: 'PF Regal Display Pro';
+}
+
+.newsletter p {
+  color: #666666;
+}
+
+.newsletter_wrap form {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter label {
+  margin-bottom: 15px!important;
+  
+}
+
+.newsletter input {
+  padding: 10px;
+  width: 100%;
+  
+  margin-bottom: 16px;
+  border: 1px solid #7E7E7E;
+  border-radius: 100px;
+  background-color: transparent;
+}
+.newsletter .btn-form{
+  text-align: right;
+}
+
+.newsletter button {
+  padding: 12px;
+  width: 50%;
+  background-color: transparent;
+  color: #DF991B;
+  border: 1px solid #DF991B;
+  font-size: 16px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .newsletter .container {
+    flex-direction: column;
+  }
+
+  .newsletter .info-column,
+  .form-column {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+ 
+/* Footer */
+
+.container{
+  max-width: 1170px;
+  margin:auto;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+ul{
+  list-style: none;
+}
+
+.footer{
+  background-color: #000000;
+  padding: 60px 0px 20px 0px;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+
+.footer-col img{
+  margin-bottom: 10px;
+}
+.footer-col h4{
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  font-weight: 500;
+  position: relative;
+}
+
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+  color: white;
+  
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255,255,255,0.2);
+  margin:0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+
+.footer-col .email:hover{
+   color: #0082e6;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+}
+}
+
+.copy{
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+  
+}
+
+
+
+
+.info-1{
+  display: none;
+}
+
+
+/* movil  */
+
+@media(max-width: 340px){
+
+  body{    
+   max-width: 340px!important;
+  }
+  .main-section .search {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    margin-top: 20px;
+  }
+  .main-section .text-icons .main-text {
+    grid-column: 1;
+    grid-row: 2;
+    margin-left: 9%;
+}
+.main-section .text-icons .main-text h3{
+  font-size: 22px;
+  
+}
+.main-section .text-icons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.main-section .text-icons .main-text button {
+  width: 290px;
+  height: 50px;
+}
+
+.info .text-content  .subtitle{
+  text-align: left;
+}
+.info .text-content .nv{
+  display: none;
+}
+
+.info .text-content .mv{
+  display: block;
+}
+
+.gallery .text-cont .mv{
+  display: block;
+}
+
+.info {
+   height: 100vh; 
+}
+
+
+.info-1{
+  display: block;
+}
+.info{
+  display: none;
+}
+
+
+.info-1{
+  width: 340px!important;
+ }
+ .info-1 .subtitle h1{
+  font-size: 28px!important;
+ }
+ .info-1 .subtitle h2{
+  font-size: 18px!important;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  
+ }
+ .info-1  p{
+  width: 340px;
+ }
+ .info-1 .view{
+  font-size:14px;
+  padding-top:10px;
+  color:#DF991B
+ }
+
+
+ /* gallery */
+
+ .gallery .content .text-cont h2,h1,p{
+  text-align: left!important;
+ }
+
+ .gallery .content .text-cont h2{
+  font-size: 18px!important;
+  padding-bottom: 10px;
+  padding-top: 20px;
+ }
+
+ .gallery .content .text-cont h1{
+  font-size: 28px!important;
+ }
+
+ .gallery .content .text-cont  p{
+  width: 340px;
+ }
+
+
+
+ .gallery .content .car-img img{
+  padding-top: 20px;
+  height: 375px;
+
+ }
+
+ .info-1 .carousel-img .content img{
+  padding-top: 30px;
+  height: 385px!important;
+}
+
+ .gallery .content .nve{
+  display: none;
+}
+
+.gallery .view{
+  font-size:14px;
+  padding-top:10px;
+  color:#DF991B
+ }
+
+
+/* properties */
+
+.properties {
+  margin-top: 240px;
+}
+
+.properties h3{
+  font-size: 18px!important;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  text-align: left;
+}
+.properties h1{
+  font-size: 28px!important;
+  text-align: left;
+}
+.properties .img-grid img{
+  width: 340px;
+  margin-left: -10px;
+  
+}
+
+.properties .text-title{
+  margin-bottom: 10%;
+}
+.properties .img-grid div{
+  
+  margin: 8% 0;
+}
+
+.oculto {
+  display: none!important;
+}
+
+/* newsletter */
+.newsletter .container{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 5px 10px 5px;
+  background-color: #26282B;
+}
+
+.newsletter .container h1{
+  font-size: 33px;
+}
+.newsletter .container h2{
+  font-size: 15px;
+}
+
+.newsletter .form-column {
+  margin-left: 0px;
+}
+
+}
+
+
+.info-1 .carousel-img .content{
+  position: relative;
+display: inline-block;
+
+font-family: 'PF Regal Display Lite';
+
+}
+
+.info-1 .carousel-img .content .castle{
+   width: 30px!important;
+   height: 30px!important;
+}
+
+
+ .info-1 .carousel-img .content img{
+    height: 400px;
+  }
+  @media (max-width: 500px){
+
+    .info-1 .carousel-img .content img{
+      padding-top: 30px;
+      height: 350px;
+    }
+
+  
+    
+  }
+
+
+/* .info {
+display: none;
+} */
