@@ -25,7 +25,7 @@
 
   .navigation{
     background-image:linear-gradient(to bottom, #1919198e, #1919198e),
-    url(/img/principal-desktop.png);
+    url(img/principal-desktop.png);
   
     background-repeat: no-repeat;
     background-size: cover;
@@ -203,7 +203,7 @@
     padding: 8px 40px 8px 20px;
     font-family: "Brandon Grotesque";
     border: 2px solid white!important;
-    background-image: url(/img/search-outline.svg);
+    background-image: url(img/search-outline.svg);
     
     filter: invert(10%) sepia(0%) saturate(100%) hue-rotate(3deg) brightness(100) contrast(100%); 
     background-color: transparent;
